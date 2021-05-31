@@ -13,4 +13,37 @@
 */
 
 
+$router->get(
+    '/',
+    [
+        'uses' => 'MainController@home',
+        'as'   => 'main-home'
+    ]
+);
 
+$router->get(
+    '/character/{id}',
+    [
+        'uses' => 'CharacterController@item',
+        'as'   => 'character-item'
+    ]
+);
+
+
+
+$router->get(
+    '/houses',
+    [
+        'uses' => 'HouseController@list',
+        'as'   => 'house-list'
+    ]
+);
+
+
+$router->get(
+    '/house/{id}',
+    [
+        'uses' => 'HouseController@item',
+        'as'   => 'house-item'
+    ]
+);
